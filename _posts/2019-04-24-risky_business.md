@@ -11,5 +11,4 @@ author: victoria
 externalLink: false
 ---
 
-
-<embed src="{{ site.url }}/assets/Empirical_Research_Paper.pdf" type="application/pdf"/>
+<object data="{{ site.url }}/assets/Empirical_Research_Paper.pdf" width="1000" height="1000" type='application/pdf'/></object>
