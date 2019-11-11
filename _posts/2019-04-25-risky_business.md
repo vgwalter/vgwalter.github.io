@@ -1,0 +1,14 @@
+---
+title: "Cyber Exploits: A Cyber Wild West for National Security Law"
+layout: post
+date: 2019-04-30 12:00
+tag: jekyll
+projects: true
+hidden: true # don't count this post in blog pagination
+description: "Computer exploits and their political ramifications"
+category: project
+author: victoria
+externalLink: false
+---
+
+<object data="{{ site.url }}/assets/Victoria_Walter_Political_Science.pdf" width="1000" height="1000" type='application/pdf'/></object>
