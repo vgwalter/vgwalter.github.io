@@ -16,7 +16,7 @@ resume: true
 resume-external: false
 resume-url: assets/Victoria_final_resume.pdf
 
-url: http://vgwalter.com/
+url: https://vgwalter.com/
 # your url: http://USERNAME.github.io
 
 permalink: /:title/
