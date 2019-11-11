@@ -51,14 +51,17 @@ Finally, if you’d like to connect or have any questions, my email, LinkedIn, r
 
 <h2>Favorite Things<h2>
 <ul class="skill-list">
-	<li><b>Favorite Fiction:</b> East of Eden by John Steinbeck</li>
-	<li><b>Favorite Nonfiction: Lean In by Sheryl Sandberg</b> </li>
-	<li><b>Favorite Food(s) to Bake/Cook:</b> Apple pie, chicken noodle soup with homemade stock</li>
-	<li><b>Favorite YouTube Channel: Bon Appétit</b> </li>
-	<li><b>Favorite Movies:</b> Ferris Bueller’s Day Off and the Big Short</li>
+
+	<li><i>Favorite Fiction:</i> East of Eden by John Steinbeck</li>
+	<li><i>Favorite Nonfiction:</i> Lean In by Sheryl Sandberg </li>
+	<li><i>Favorite Food(s) to Bake/Cook:</i> Apple pie, chicken noodle soup with homemade stock</li>
+	<li><i>Favorite YouTube Channel:</i> Bon Appétit </li>
+	<li><i>Favorite Movies:</i> Ferris Bueller’s Day Off and the Big Short</li>
+
 </ul>
 
 <h2>Other Interests</h2>
+
 <ul class="skill-list">
 	<li>ESG / Impact Investing</li>
 	<li>Development Economics</li>
@@ -67,7 +70,7 @@ Finally, if you’d like to connect or have any questions, my email, LinkedIn, r
 
 <h2>Projects</h2>
 
-<ul>
+<ul class="skill-list">
 	<li><a href="https://github.com/">Lorem Lorem</a></li>
 	<li><a href="https://github.com/">Ipsum Dolor</a></li>
 	<li><a href="https://github.com/">Dolor Lorem</a></li>
