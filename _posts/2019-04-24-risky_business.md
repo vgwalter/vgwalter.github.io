@@ -1,7 +1,7 @@
 ---
 title: "Risky Business: Sex and Financial Decision-Making"
 layout: post
-date: 2016-01-23 22:10
+date: 2019-04-24 22:10
 tag: jekyll
 projects: true
 hidden: true # don't count this post in blog pagination
@@ -11,4 +11,6 @@ author: victoria
 externalLink: false
 ---
 
-<object data="{{ site.url }}/assets/Empirical Research Paper.pdf" width="1000" height="1000" type='application/pdf'/>
+
+<a href="{{site.url}}/assets/Empirical_Research_Paper.pdf">Empirical Research Paper - RISKY BUSINESS: SEX AND FINANCIAL DECISION-MAKING</a>
+<object data="{{ site.url }}/assets/Empirical_Research_Paper.pdf" width="1000" height="1000" type='application/pdf'/>
