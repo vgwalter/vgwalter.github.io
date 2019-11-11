@@ -52,11 +52,11 @@ Finally, if you’d like to connect or have any questions, my email, LinkedIn, r
 <h2>Favorite Things<h2>
 <ul class="skill-list">
 
-	<li><i>Favorite Fiction:</i> East of Eden by John Steinbeck</li>
-	<li><i>Favorite Nonfiction:</i> Lean In by Sheryl Sandberg </li>
-	<li><i>Favorite Food(s) to Bake/Cook:</i> Apple pie, chicken noodle soup with homemade stock</li>
-	<li><i>Favorite YouTube Channel:</i> Bon Appétit </li>
-	<li><i>Favorite Movies:</i> Ferris Bueller’s Day Off and the Big Short</li>
+	<li>Favorite Fiction: East of Eden by John Steinbeck</li>
+	<li>Favorite Nonfiction: Lean In by Sheryl Sandberg </li>
+	<li>Favorite Food(s) to Bake/Cook: Apple pie, chicken noodle soup with homemade stock</li>
+	<li>Favorite YouTube Channel: Bon Appétit </li>
+	<li>Favorite Movies: Ferris Bueller’s Day Off and the Big Short</li>
 
 </ul>
 
