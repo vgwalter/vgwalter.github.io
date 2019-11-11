@@ -71,7 +71,7 @@ Finally, if you’d like to connect or have any questions, my email, LinkedIn, r
 <h2>Projects</h2>
 
 <ul class="skill-list">
-	<li><a href="https://github.com/">Lorem Lorem</a></li>
-	<li><a href="https://github.com/">Ipsum Dolor</a></li>
-	<li><a href="https://github.com/">Dolor Lorem</a></li>
+	<li><a href="{{ site.url }}/assets/Empirical Research Paper.pdf">Empirical Research Paper - RISKY BUSINESS: SEX AND FINANCIAL DECISION-MAKING</a></li>
+	<li><a href="{{ site.url }}/assets/Victoria Thesis Student Loan Bubble.pdf">Economics Senior Thesis -  Miserable Millennials: The Current State of the Student Loan Bubble Using 2016 Data</a></li>
+	<li><a href="{{ site.url }}/assets/Victoria Walter Political Science.pdf">Political Senior Thesis -  Cyber Exploits: A Cyber Wild West for National Security Law</a></li>
 </ul>
