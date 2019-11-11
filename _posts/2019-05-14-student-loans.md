@@ -1,7 +1,6 @@
 ---
 title: "Miserable Millennials: The Current State of the Student Loan Bubble Using 2016 Data"
 layout: post
-May 14, 2019
 date: 2019-05-14 14:00
 tag: jekyll
 projects: true
