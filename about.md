@@ -12,6 +12,9 @@ layout: page
 Finally, if you’d like to connect or have any questions, my email, LinkedIn, resume, and other information are available on my home page. Thanks for stopping by!
 </p>
 
+Let's connect
+![Contact]({{ site.url }}/assets/images/contact.png)
+
 <h2>Skills</h2>
 
 <ul class="skill-list">

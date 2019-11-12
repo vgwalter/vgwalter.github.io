@@ -11,4 +11,4 @@ author: victoria
 externalLink: false
 ---
 
-<object data="{{ site.url }}/assets/Victoria_Thesis_Student_Loan_Bubble.pdf" width="550" height="1000" type='application/pdf'/></object>
+<object data="{{ site.url }}/assets/Victoria_Thesis_Student_Loan_Bubble.pdf" width="600" height="1000" type='application/pdf'/></object>
