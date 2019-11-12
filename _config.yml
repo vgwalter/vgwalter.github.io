@@ -1,6 +1,6 @@
 # main text of home
 name: Victoria G Walter
-bio: Baker, Economist, Political Science Geek
+bio: Economist, Political Science Geek, Baker
 
 # twitter summary info
 description: Baker, Economist, Political Science Geek, Daughter. New York, NY
@@ -56,7 +56,7 @@ email: vgwalter24@gmail.com
 authors:
     victoria:
         name: Victoria Walter
-        bio: Baker, Economist, Political Science Geek, Daughter. New York, NY
+        bio: Economist, Political Science Geek, Baker, Daughter. New York, NY
         external-image: false
         picture: assets/images/profile.jpg
 
