@@ -1,9 +1,9 @@
 # main text of home
 name: Victoria G Walter
-bio: Exploring the world, one cookie at a time
+bio: Baker, Economist, Political Science Geek
 
 # twitter summary info
-description: Baker, Economist, Political Science geek, Daughter. New York, NY
+description: Baker, Economist, Political Science Geek, Daughter. New York, NY
 
 # if it's an external image, update below for true
 # better with square images
@@ -56,7 +56,7 @@ email: vgwalter24@gmail.com
 authors:
     victoria:
         name: Victoria Walter
-        bio: Exploring the world, one cookie at a time
+        bio: Baker, Economist, Political Science Geek, Daughter. New York, NY
         external-image: false
         picture: assets/images/profile.jpg
 
