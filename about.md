@@ -49,14 +49,14 @@ Finally, if you’d like to connect or have any questions, my email, LinkedIn, r
 	<li>I sang in choir in middle school, high school, and college.</li>
 </ul>
 
-<h2>Favorite Things<h2>
+<h2>Favorite Things</h2>
 <ul class="skill-list">
 
-	<li>Favorite Fiction: East of Eden by John Steinbeck</li>
-	<li>Favorite Nonfiction: Lean In by Sheryl Sandberg </li>
-	<li>Favorite Food(s) to Bake/Cook: Apple pie, chicken noodle soup with homemade stock</li>
-	<li>Favorite YouTube Channel: Bon Appétit </li>
-	<li>Favorite Movies: Ferris Bueller’s Day Off and the Big Short</li>
+	<li><i>Favorite Fiction: East of Eden by John Steinbeck</i></li>
+	<li><i>Favorite Nonfiction: Lean In by Sheryl Sandberg</i></li>
+	<li><i>Favorite Food(s) to Bake/Cook: Apple pie, chicken noodle soup with homemade stock</i></li>
+	<li><i>Favorite YouTube Channel: Bon Appétit</i></li>
+	<li><i>Favorite Movies: Ferris Bueller’s Day Off and the Big Short</i></li>
 
 </ul>
 
