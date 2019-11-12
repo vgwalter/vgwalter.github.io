@@ -4,7 +4,7 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>“If you work hard enough and assert yourself, and use your mind and imagination, you can shape the world to your desires.” – Malcolm Gladwell</p>
+<p>*“If you work hard enough and assert yourself, and use your mind and imagination, you can shape the world to your desires.” – Malcolm Gladwell*</p>
 
 <p>Hi! I’m Victoria G. Walter and I’m 22 living in the New York metro area. When I’m not on my computer learning to program or reading the New Yorker or the Wall Street Journal, you’ll most likely find me watching Bon Appétit recipes and trying them out in the kitchen. </p>
 <p>I recently graduated magna cum laude from Dickinson College with a bachelor’s of arts in economics and political science. Following unexpected challenges in my senior year, I decided to turn the months following graduation into an opportunity to learn and grow, not only my skillset but also myself. Since then I’ve refocused on my goals and values, made significant positive lifestyle changes and started on a path of well-rounded self-improvement.</p>
