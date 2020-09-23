@@ -11,4 +11,4 @@ author: victoria
 externalLink: false
 ---
 
-<object data="{{ site.url }}/assets/scf_analysis.html" width="600" height="1000"></object>
+<object data="{{ site.url }}/assets/scf_analysis.html" width="1500" height="2000"></object>
