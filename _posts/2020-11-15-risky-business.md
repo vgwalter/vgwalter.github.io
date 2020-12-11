@@ -1,7 +1,7 @@
 ---
 title: "Risky Business: Sex and Financial Decision-Making"
 layout: post
-date: 2018-12-15 13:00
+date: 2020-11-15 13:00
 tag: jekyll
 projects: true
 hidden: true # don't count this post in blog pagination
