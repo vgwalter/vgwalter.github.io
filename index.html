@@ -966,7 +966,7 @@
       <div class="work-card featured fade-up">
         <div>
           <span class="work-tag tag-consulting">Federal Consulting</span>
-          <h3>CAAT Dashboard &amp; C2DB</h3>
+          <h3>Capital Acquisitions Analytical Toolkit Dashboard &amp; C2DB</h3>
           <p>
             An R Shiny analytics platform and SQL Server database supporting benchmarking and evaluation of multi-billion dollar NNSA capital acquisition programs. Serves 75+ federal analysts and is the primary decision-support tool for program oversight.
           </p>
@@ -981,12 +981,17 @@
         </div>
         <div>
           <ul class="work-highlights">
-            <li>Led development roadmap for v4.0, introducing 5 new analytical features and an expanded benchmarking dataset</li>
-            <li>Designed SQL Server infrastructure including triggers, extended properties, and metadata structures for data governance</li>
-            <li>Architected and maintained ETL pipelines using custom R package development and tidyverse workflows</li>
-            <li>Implemented 100+ automated data validations using pointblank, improving data quality and stakeholder trust</li>
-            <li>Built and migrated frontend modules using Shiny and bslib; managed deployments via Posit Connect</li>
-            <li>Primary client interface: translated stakeholder needs into features and delivered technical briefings to senior federal staff</li>
+            <li style="font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: #8a8a84; border-top: none; padding-bottom: 2px;">Strategy & Stakeholder Engagement</li>
+              <li>Conducted ongoing stakeholder engagement to elicit user needs and translate analytical requirements into new platform features — serving as the primary interface between federal clients and the development team</li>
+              <li>Led change management across a user base of 75+ federal analysts through tailored use-case demonstrations designed around each stakeholder's specific analytical workflows and program responsibilities</li>
+              <li>Developed comprehensive training guides and instructional materials enabling analysts to independently use platform capabilities for program analysis and decision-making</li>
+              <li>Drove user adoption and stakeholder buy-in through targeted engagement and training — transforming stakeholders from passive recipients to active daily users, with day-over-day dashboard hits increasing over 50%</li>
+            <li style="font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: #8a8a84; border-top: 0.5px solid rgba(26,26,24,0.08); padding-top: 10px; padding-bottom: 2px;">Technical</li>
+              <li>Led development roadmap for v4.0, introducing 5 new analytical features and an expanded benchmarking dataset</li>
+              <li>Designed SQL Server infrastructure including triggers, extended properties, and metadata structures for data governance</li>
+              <li>Architected and maintained ETL pipelines using custom R package development and tidyverse workflows</li>
+              <li>Implemented 100+ automated data validations using pointblank, improving data quality and stakeholder trust</li>
+              <li>Built and migrated frontend modules using Shiny and bslib; managed Posit Connect server including deployments, environment configuration, and access control</li>
           </ul>
         </div>
       </div>
@@ -1018,10 +1023,17 @@
       
       <!-- IIP -->
       <div class="work-card fade-up">
-        <span class="work-tag tag-consulting">Internal Platform</span>
-        <h3>IIP Backend &amp; IIPDB</h3>
+        <span class="work-tag tag-consulting">Federal Consulting</span>
+        <h3>Integrated Infrastructure Portfolio - Data Pipeline &amp; IIPDB</h3>
         <p>
-          Sole architect and maintainer of IIPDB — a SQLite-based data management system governed by a custom R package following the medallion architecture model. Handles all data ingestion, cleaning, validation, and storage across the pipeline.
+          <p>
+              A R Shiny dashboard enabling stakeholders to perform tradeoff analysis and
+              portfolio optimization across a list of infrastructure projects — adjusting
+              start years, durations, and funding levels to build portfolios that are both
+              executable and affordable. My primary contribution is the backend data
+              infrastructure that powers it: an ETL pipeline and SQLite database following
+              the medallion architecture model, designed to push analytical complexity into
+              the data layer and minimize computation in the dashboard itself.
         </p>
         <div class="work-meta">
           <span class="meta-pill">SQLite</span>
@@ -1029,11 +1041,13 @@
           <span class="meta-pill">Medallion Architecture</span>
           <span class="meta-pill">Data Validation</span>
         </div>
-        <ul class="work-highlights">
-          <li>Designed and maintain a bronze/silver/gold medallion data pipeline from raw ingestion to analysis-ready tables</li>
-          <li>Custom R package handles all cleaning, wrangling, validation, and database writes</li>
-          <li>Sole owner of architecture decisions, documentation, and ongoing maintenance</li>
-        </ul>
+          <ul class="work-highlights">
+            <li>Architected and maintain IIPDB — a SQLite database and custom R package pipeline following the medallion model: raw ingestion → silver standardization → gold transformation</li>
+            <li>Silver layer cleans and standardizes multiple disparate data sources into consistent, query-ready tables — separating ingestion concerns from analytical logic</li>
+            <li>Gold layer applies custom R modeling functions that encode domain-specific business logic and pre-compute analytical results, minimizing computation in the Shiny frontend</li>
+            <li>Designed the full database schema — table structures, relationships, and constraints — to support efficient querying from the dashboard</li>
+            <li>Wrote all ETL functions within a custom R package handling ingestion, cleaning, transformation, and loading across every data source</li>
+          </ul>
       </div>
 
       <!-- Bluebonnet -->
