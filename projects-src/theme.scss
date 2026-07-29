@@ -1,0 +1,116 @@
+/*-- scss:defaults --*/
+
+// Design tokens mirrored from assets/css/styles.css so project pages and the
+// landing page stay visually identical. If you change a colour or a typeface
+// there, change it here too — these are the only two places they're defined.
+
+$ink:          #1a1a18;
+$ink-soft:     #4a4a46;
+$ink-muted:    #8a8a84;
+$canvas:       #f7f5f0;
+$canvas-warm:  #ede9e0;
+$canvas-white: #fdfcfa;
+$accent:       #2d5a3d;
+$accent-light: #e8f0eb;
+$accent-mid:   #4a7c5e;
+$gold:         #b8860b;
+$gold-light:   #f5f0e0;
+
+// Bootstrap variable overrides — Quarto builds its theme on Bootstrap, the
+// same engine bslib uses, so these behave the way they do in a Shiny app.
+$body-bg:      $canvas;
+$body-color:   $ink;
+$link-color:   $accent;
+$primary:      $accent;
+$secondary:    $ink-soft;
+$border-color: rgba(26, 26, 24, 0.12);
+
+$font-family-sans-serif: 'DM Sans', system-ui, -apple-system, sans-serif;
+$headings-font-family:   'DM Serif Display', Georgia, serif;
+$font-size-base:         1rem;
+$line-height-base:       1.6;
+$headings-font-weight:   400;
+
+$code-bg:            $canvas-white;
+$code-color:         #8a3a2e;
+$table-border-color: $border-color;
+
+$navbar-bg:      rgba(247, 245, 240, 0.92);
+$navbar-fg:      $ink-soft;
+$toc-color:      $ink-muted;
+$toc-font-size:  0.85rem;
+
+/*-- scss:rules --*/
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+h1.title {
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-style: italic;
+  color: $ink-soft;
+  font-size: 1.25rem;
+}
+
+// Section rule that matches the landing page's .section-number treatment
+h2 {
+  border-bottom: 0.5px solid $border-color;
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+}
+
+// Figures sit on the white card colour rather than the warm page background
+figure {
+  background: $canvas-white;
+  border: 0.5px solid $border-color;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  color: $ink-muted;
+  letter-spacing: 0.02em;
+  margin-top: 0.75rem;
+}
+
+// Callout for the headline finding of an analysis
+.finding {
+  border-left: 3px solid $accent;
+  background: $accent-light;
+  padding: 1rem 1.25rem;
+  margin: 2rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+table {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.9rem;
+}
+
+code {
+  font-size: 0.85em;
+}
+
+a:focus-visible {
+  outline: 2px solid $accent;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

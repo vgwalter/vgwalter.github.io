@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# Quarto build artifacts
+projects-src/.quarto/
+projects-src/**/*_files/
+projects-src/**/.jupyter_cache/
+
+# macOS
+.DS_Store

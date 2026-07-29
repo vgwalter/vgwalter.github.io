@@ -1,0 +1,76 @@
+---
+title: "Customer Cohort Economics"
+subtitle: "Where retention spend earns its return, and where it doesn't"
+date: last-modified
+author: "Victoria G. Walter"
+categories: [Business Analytics, Python]
+abstract: |
+  One-line version of the finding goes here. Write this last, after the
+  analysis is done — it is the sentence a hiring manager will actually read.
+---
+
+## The question
+
+What decision is this analysis feeding? Name it in two sentences. Not "explore
+the data" — something closer to "we have a fixed retention budget and need to
+know which acquisition cohorts justify it."
+
+## Data
+
+[UCI Online Retail II](https://archive.ics.uci.edu/dataset/502/online+retail+ii) —
+1,067,371 transactions from a UK online retailer, December 2009 to December 2011.
+Largely wholesale customers, so read this as B2B rather than consumer retail.
+
+```{python}
+#| label: load
+#| code-summary: "Load and clean"
+
+# pip install ucimlrepo pandas
+# from ucimlrepo import fetch_ucirepo
+# raw = fetch_ucirepo(id=502).data.original
+
+# Two cleaning decisions worth stating out loud rather than burying:
+#
+#   1. Invoice numbers prefixed with "c" are cancellations. Keep them as
+#      negative revenue — return rate is itself a segment signal, and
+#      dropping them overstates cohort value.
+#   2. CustomerID is missing on a meaningful share of rows. Cohort analysis
+#      runs on the identified subset only; say what share that is.
+```
+
+::: {.finding}
+**Headline finding.** State the number and what it implies for the decision.
+:::
+
+## Cohort retention
+
+```{python}
+#| label: fig-retention
+#| fig-cap: "Monthly retention by acquisition cohort"
+```
+
+## Revenue concentration
+
+RFM segmentation and the Pareto picture — what share of customers drive what
+share of revenue.
+
+## Lifetime value and payback
+
+LTV by cohort against acquisition cost, and the payback period that falls out
+of it.
+
+## Churn model
+
+Logistic regression as the interpretable baseline, gradient boosting for
+comparison. Report lift over baseline, not accuracy — accuracy on an imbalanced
+churn problem is not a meaningful number.
+
+## Recommendation
+
+The part most portfolio projects skip. Where should the money go, what return
+should be expected, and what evidence would show this conclusion is wrong?
+
+## Limitations
+
+What this analysis cannot support. Being specific here reads as more competent,
+not less.

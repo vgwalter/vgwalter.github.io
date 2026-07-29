@@ -3,1280 +3,512 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- SEO & Social -->
-<meta name="description" content="Victoria G. Walter — data strategist and analyst specializing in political data, research, and analytical platform development.">
-<meta name="author" content="Victoria G. Walter">
-<meta name="keywords" content="data science, political data, R, Shiny, ETL, data engineering, strategy, consulting">
 
-<!-- Open Graph — controls LinkedIn/social preview card -->
-<meta property="og:title" content="Victoria G. Walter — Data & Strategy for the Public Good">
-<meta property="og:description" content="Building systems that turn complex data into decisions that matter.">
+<meta name="description" content="Victoria G. Walter — analyst and analytical platform builder working across cost analysis, business analytics, and economic research. Washington, D.C.">
+<meta name="author" content="Victoria G. Walter">
+<meta name="keywords" content="business analyst, data analyst, cost analysis, capital planning, financial analysis, economic research, forecasting, Python, SQL, R, Shiny, ETL">
+<link rel="canonical" href="https://vgwalter.com">
+
+<meta property="og:title" content="Victoria G. Walter — Data Systems for Analytical Work">
+<meta property="og:description" content="I work across the full arc of an analytical problem — its diagnosis, the infrastructure built to resolve it, and the research that comes after.">
 <meta property="og:url" content="https://vgwalter.com">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://vgwalter.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
-<!-- Twitter/X card -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Victoria G. Walter — Data & Strategy for the Public Good">
-<meta name="twitter:description" content="Building systems that turn complex data into decisions that matter.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Victoria G. Walter — Data Systems for Analytical Work">
+<meta name="twitter:description" content="I work across the full arc of an analytical problem — its diagnosis, the infrastructure built to resolve it, and the research that comes after.">
 
-<!-- Favicon -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◈</text></svg>">
-<title>Victoria G. Walter — Data & Strategy for the Public Good</title>
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<title>Victoria G. Walter — Data Systems for Analytical Work</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --ink: #1a1a18;
-    --ink-soft: #4a4a46;
-    --ink-muted: #8a8a84;
-    --canvas: #f7f5f0;
-    --canvas-warm: #ede9e0;
-    --canvas-white: #fdfcfa;
-    --accent: #2d5a3d;
-    --accent-light: #e8f0eb;
-    --accent-mid: #4a7c5e;
-    --gold: #b8860b;
-    --gold-light: #f5f0e0;
-    --border: rgba(26,26,24,0.12);
-    --border-strong: rgba(26,26,24,0.22);
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--canvas);
-    color: var(--ink);
-    font-size: 16px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* NAV */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    background: rgba(247,245,240,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 0.5px solid var(--border);
-    padding: 0 2rem;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .nav-logo {
-    font-family: 'DM Serif Display', serif;
-    font-size: 18px;
-    color: var(--ink);
-    text-decoration: none;
-    letter-spacing: -0.01em;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
-
-  .nav-links a {
-    font-size: 13px;
-    font-weight: 400;
-    color: var(--ink-soft);
-    text-decoration: none;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    transition: color 0.2s;
-  }
-
-  .nav-links a:hover { color: var(--accent); }
-
-  .nav-cta {
-    font-size: 13px;
-    color: var(--accent) !important;
-    font-weight: 500 !important;
-    border: 0.5px solid var(--accent);
-    padding: 6px 16px;
-    border-radius: 20px;
-    transition: background 0.2s !important;
-  }
-  .nav-cta:hover { background: var(--accent-light) !important; }
-
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-top: 56px;
-  }
-
-  .hero-left {
-    padding: 8rem 4rem 6rem 6rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-right: 0.5px solid var(--border);
-  }
-
-  .hero-eyebrow {
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .hero-eyebrow::before {
-    content: '';
-    display: block;
-    width: 24px;
-    height: 1px;
-    background: var(--accent);
-  }
-
-  .hero-name {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(52px, 6vw, 80px);
-    line-height: 1.0;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-    margin-bottom: 0.5rem;
-  }
-
-  .hero-name em {
-    font-style: italic;
-    color: var(--accent);
-  }
-
-  .hero-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(18px, 2.2vw, 26px);
-    font-weight: 400;
-    color: var(--ink-soft);
-    font-style: italic;
-    margin-bottom: 2rem;
-    line-height: 1.3;
-  }
-
-  .hero-desc {
-    font-size: 16px;
-    color: var(--ink-soft);
-    line-height: 1.75;
-    max-width: 480px;
-    margin-bottom: 3rem;
-    font-weight: 300;
-  }
-
-  .hero-links {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--accent);
-    color: #fff;
-    padding: 12px 28px;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
-    letter-spacing: 0.01em;
-  }
-
-  .btn-primary:hover { background: #1e3f2b; transform: translateY(-1px); }
-
-  .btn-outline {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    border: 0.5px solid var(--border-strong);
-    color: var(--ink-soft);
-    padding: 12px 28px;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 400;
-    text-decoration: none;
-    transition: border-color 0.2s, color 0.2s, transform 0.15s;
-  }
-
-  .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
-
-  .hero-right {
-    background: var(--canvas-warm);
-    padding: 8rem 6rem 6rem 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-right::before {
-    content: '';
-    position: absolute;
-    top: -80px; right: -80px;
-    width: 320px; height: 320px;
-    border-radius: 50%;
-    border: 0.5px solid var(--border);
-  }
-
-  .hero-right::after {
-    content: '';
-    position: absolute;
-    bottom: -40px; left: -40px;
-    width: 200px; height: 200px;
-    border-radius: 50%;
-    border: 0.5px solid var(--border);
-  }
-
-  .stat-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-bottom: 3rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  .stat-card {
-    background: var(--canvas-white);
-    border: 0.5px solid var(--border);
-    border-radius: 8px;
-    padding: 1.5rem;
-  }
-
-  .stat-number {
-    font-family: 'DM Serif Display', serif;
-    font-size: 42px;
-    line-height: 1;
-    color: var(--ink);
-    margin-bottom: 4px;
-  }
-
-  .stat-label {
-    font-size: 12px;
-    color: var(--ink-muted);
-    font-weight: 400;
-    letter-spacing: 0.03em;
-    line-height: 1.4;
-  }
-
-  .skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    position: relative;
-    z-index: 1;
-  }
-
-  .tag {
-    font-size: 12px;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-  }
-
-  .tag-tech {
-    background: var(--canvas-white);
-    border: 0.5px solid var(--border-strong);
-    color: var(--ink-soft);
-  }
-
-  .tag-domain {
-    background: var(--accent-light);
-    border: 0.5px solid rgba(45,90,61,0.2);
-    color: var(--accent);
-  }
-
-  /* SECTIONS */
-  section {
-    padding: 6rem 0;
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 4rem;
-  }
-
-  .section-header {
-    margin-bottom: 4rem;
-  }
-
-  .section-number {
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-    margin-bottom: 0.75rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .section-number::after {
-    content: '';
-    display: block;
-    flex: 1;
-    height: 0.5px;
-    background: var(--border);
-  }
-
-  .section-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(32px, 4vw, 48px);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-  }
-
-  .section-title em { font-style: italic; color: var(--accent); }
-
-  /* ABOUT */
-  .about-section {
-    background: var(--canvas-white);
-    border-top: 0.5px solid var(--border);
-    border-bottom: 0.5px solid var(--border);
-  }
-
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    gap: 6rem;
-    align-items: start;
-  }
-
-  .about-left h2 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(28px, 3vw, 38px);
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-    margin-bottom: 1.5rem;
-  }
-
-  .about-left h2 em { font-style: italic; color: var(--accent); }
-
-  .about-left p {
-    font-size: 15px;
-    color: var(--ink-soft);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-    font-weight: 300;
-  }
-
-  .about-right {
-    padding-top: 1rem;
-  }
-
-  .focus-areas {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .focus-card {
-    border: 0.5px solid var(--border);
-    border-radius: 8px;
-    padding: 1.25rem;
-    background: var(--canvas);
-  }
-
-  .focus-icon {
-    width: 32px;
-    height: 32px;
-    background: var(--accent-light);
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0.75rem;
-    font-size: 14px;
-  }
-
-  .focus-card h4 {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--ink);
-    margin-bottom: 4px;
-    letter-spacing: 0.01em;
-  }
-
-  .focus-card p {
-    font-size: 12px;
-    color: var(--ink-muted);
-    line-height: 1.5;
-  }
-
-  .timeline {
-    border-left: 0.5px solid var(--border-strong);
-    padding-left: 1.5rem;
-  }
-
-  .timeline-item {
-    position: relative;
-    margin-bottom: 1.5rem;
-  }
-
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -1.5rem;
-    top: 6px;
-    width: 7px;
-    height: 7px;
-    background: var(--canvas-white);
-    border: 1.5px solid var(--accent);
-    border-radius: 50%;
-    transform: translateX(-3px);
-  }
-
-  .timeline-date {
-    font-size: 11px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-    margin-bottom: 2px;
-  }
-
-  .timeline-role {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--ink);
-  }
-
-  .timeline-org {
-    font-size: 13px;
-    color: var(--ink-soft);
-    font-weight: 300;
-  }
-
-  /* WORK */
-  .work-section { background: var(--canvas); }
-
-  .work-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5px;
-    background: var(--border);
-    border: 0.5px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-  }
-
-  .work-card {
-    background: var(--canvas-white);
-    padding: 2.5rem;
-    position: relative;
-    transition: background 0.2s;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-  }
-
-  .work-card:hover { background: var(--canvas-warm); }
-
-  .work-card.featured {
-    grid-column: span 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: start;
-  }
-
-  .work-tag {
-    display: inline-block;
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    border-radius: 20px;
-    margin-bottom: 1.25rem;
-    font-weight: 500;
-  }
-
-  .tag-consulting {
-    background: var(--gold-light);
-    color: var(--gold);
-    border: 0.5px solid rgba(184,134,11,0.2);
-  }
-
-  .tag-political {
-    background: var(--accent-light);
-    color: var(--accent);
-    border: 0.5px solid rgba(45,90,61,0.2);
-  }
-
-  .tag-personal {
-    background: #eef2ff;
-    color: #4338ca;
-    border: 0.5px solid rgba(67,56,202,0.2);
-  }
-
-  .work-card h3 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 24px;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.75rem;
-    color: var(--ink);
-  }
-
-  .work-card p {
-    font-size: 14px;
-    color: var(--ink-soft);
-    line-height: 1.7;
-    font-weight: 300;
-    margin-bottom: 1.25rem;
-  }
-
-  .work-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 1.5rem;
-  }
-
-  .meta-pill {
-    font-size: 11px;
-    padding: 3px 10px;
-    background: var(--canvas);
-    border: 0.5px solid var(--border-strong);
-    border-radius: 20px;
-    color: var(--ink-soft);
-  }
-
-  .work-highlights {
-    list-style: none;
-  }
-
-  .work-highlights li {
-    font-size: 13px;
-    color: var(--ink-soft);
-    padding: 6px 0;
-    border-top: 0.5px solid var(--border);
-    display: flex;
-    gap: 10px;
-    align-items: start;
-    font-weight: 300;
-    line-height: 1.5;
-  }
-
-  .work-highlights li::before {
-    content: '→';
-    color: var(--accent);
-    font-size: 11px;
-    margin-top: 3px;
-    flex-shrink: 0;
-  }
-
-  .work-arrow {
-    position: absolute;
-    bottom: 2.5rem;
-    right: 2.5rem;
-    font-size: 18px;
-    color: var(--border-strong);
-    transition: color 0.2s, transform 0.2s;
-  }
-
-  .work-card:hover .work-arrow {
-    color: var(--accent);
-    transform: translate(2px, -2px);
-  }
-
-  /* SKILLS */
-  .skills-section {
-    background: var(--accent);
-    color: #fff;
-  }
-
-  .skills-section .section-number { color: rgba(255,255,255,0.4); }
-  .skills-section .section-number::after { background: rgba(255,255,255,0.15); }
-  .skills-section .section-title { color: #fff; }
-  .skills-section .section-title em { color: #a8d4b8; }
-
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5px;
-    background: rgba(255,255,255,0.1);
-    border: 0.5px solid rgba(255,255,255,0.1);
-    border-radius: 12px;
-    overflow: hidden;
-    margin-top: 3rem;
-  }
-
-  .skill-group {
-    background: rgba(255,255,255,0.05);
-    padding: 2rem;
-  }
-
-  .skill-group-label {
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.45);
-    margin-bottom: 1rem;
-    font-weight: 500;
-  }
-
-  .skill-list {
-    list-style: none;
-  }
-
-  .skill-list li {
-    font-size: 14px;
-    color: rgba(255,255,255,0.85);
-    padding: 5px 0;
-    border-bottom: 0.5px solid rgba(255,255,255,0.08);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 300;
-  }
-
-  .skill-list li:last-child { border-bottom: none; }
-
-  .skill-dot {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: #a8d4b8;
-    flex-shrink: 0;
-  }
-
-  /* CONTACT */
-  .contact-section {
-    background: var(--canvas-white);
-    border-top: 0.5px solid var(--border);
-  }
-
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: center;
-  }
-
-  .contact-left h2 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(28px, 3.5vw, 44px);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    margin-bottom: 1.25rem;
-  }
-
-  .contact-left h2 em { font-style: italic; color: var(--accent); }
-
-  .contact-left p {
-    font-size: 15px;
-    color: var(--ink-soft);
-    line-height: 1.8;
-    font-weight: 300;
-    margin-bottom: 2rem;
-  }
-
-  .contact-links {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .contact-link {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    text-decoration: none;
-    color: var(--ink-soft);
-    font-size: 14px;
-    padding: 1rem 1.25rem;
-    border: 0.5px solid var(--border);
-    border-radius: 8px;
-    transition: border-color 0.2s, color 0.2s, background 0.2s;
-  }
-
-  .contact-link:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: var(--accent-light);
-  }
-
-  .contact-link-icon {
-    width: 36px;
-    height: 36px;
-    background: var(--canvas);
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-  }
-
-  .contact-link-label {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--ink-muted);
-    display: block;
-    margin-bottom: 1px;
-  }
-
-  .contact-link-value { font-weight: 400; }
-
-  .contact-right {
-    background: var(--canvas);
-    border: 0.5px solid var(--border);
-    border-radius: 12px;
-    padding: 2.5rem;
-  }
-
-  .availability-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    color: var(--accent);
-    background: var(--accent-light);
-    border: 0.5px solid rgba(45,90,61,0.2);
-    padding: 6px 14px;
-    border-radius: 20px;
-    margin-bottom: 1.5rem;
-    font-weight: 500;
-  }
-
-  .availability-dot {
-    width: 6px;
-    height: 6px;
-    background: var(--accent);
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
-  }
-
-  .interest-list {
-    list-style: none;
-  }
-
-  .interest-list li {
-    font-size: 14px;
-    color: var(--ink-soft);
-    padding: 10px 0;
-    border-bottom: 0.5px solid var(--border);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 300;
-  }
-
-  .interest-list li:last-child { border-bottom: none; }
-
-  .interest-list li::before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--accent-light);
-    border: 1.5px solid var(--accent);
-    flex-shrink: 0;
-  }
-
-  /* FOOTER */
-  footer {
-    background: var(--ink);
-    color: rgba(255,255,255,0.4);
-    padding: 2rem 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
-    letter-spacing: 0.03em;
-  }
-
-  footer span { color: rgba(255,255,255,0.6); }
-
-  /* FADE IN */
-  .fade-up {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-
-  .fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* RESPONSIVE */
-  @media (max-width: 900px) {
-    .hero { grid-template-columns: 1fr; }
-    .hero-left { padding: 5rem 2rem 3rem; border-right: none; border-bottom: 0.5px solid var(--border); }
-    .hero-right { padding: 3rem 2rem; }
-    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .work-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
-    .work-grid { grid-template-columns: 1fr; }
-    .skills-grid { grid-template-columns: 1fr; }
-    .focus-areas { grid-template-columns: 1fr; }
-    .stat-grid { grid-template-columns: 1fr 1fr; }
-    .container { padding: 0 1.5rem; }
-    nav { padding: 0 1.5rem; }
-    .nav-links { gap: 1rem; }
-    footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/paper.css">
 </head>
 <body>
 
-<nav>
-  <a href="#" class="nav-logo">VGW</a>
-<ul class="nav-links">
-  <li><a href="#about">About</a></li>
-  <li><a href="#work">Work</a></li>
-  <li><a href="#skills">Skills</a></li>
-  <li><a href="https://vgwalter.shinyapps.io/pa-electoral-atlas/" target="_blank">Live Project ↗</a></li>
-  <li><a href="#contact" class="nav-cta">Contact</a></li>
-</ul>
-</nav>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-left">
-    <div class="hero-eyebrow">Data &amp; Strategy for the Public Good</div>
-    <h1 class="hero-name">Victoria<br><em>Walter</em></h1>
-    <p class="hero-title">I help organizations trust their data,<br>understand it, and act on it.</p>
-<p class="hero-desc">
-  I help organizations trust their data, understand it, and act on it — 
-  building the pipelines, databases, and dashboards that make complex data 
-  accessible and actionable. I work at the intersection of technical 
-  execution and stakeholder strategy, with a focus on mission-driven 
-  organizations where better data can translate directly into real-world change.
-</p>
-    <div class="hero-links">
-      <a href="#work" class="btn-primary">View my work ↓</a>
-      <a href="https://github.com/vgwalter" target="_blank" class="btn-outline">GitHub ↗</a>
-    </div>
-  </div>
-
-  <div class="hero-right">
-    <div class="stat-grid">
-      <div class="stat-card fade-up">
-        <div class="stat-number">5+</div>
-        <div class="stat-label">Years building analytical platforms</div>
-      </div>
-      <div class="stat-card fade-up">
-        <div class="stat-number">75+</div>
-        <div class="stat-label">Federal analysts served by platforms I lead</div>
-      </div>
-      <div class="stat-card fade-up">
-        <div class="stat-number">$6M+</div>
-        <div class="stat-label">In matched donations supported via automated pipelines</div>
-      </div>
-      <div class="stat-card fade-up">
-        <div class="stat-number">100+</div>
-        <div class="stat-label">Automated data validations deployed</div>
-      </div>
-    </div>
-    <div class="skill-tags">
-      <span class="tag tag-domain">Political Data</span>
-      <span class="tag tag-domain">Strategy</span>
-      <span class="tag tag-domain">Data Engineering</span>
-      <span class="tag tag-tech">R / Shiny</span>
-      <span class="tag tag-tech">SQL</span>
-      <span class="tag tag-tech">Python</span>
-      <span class="tag tag-tech">ETL Pipelines</span>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about-section" id="about">
-  <div class="container">
-    <div class="about-grid">
-<div class="about-left fade-up">
-  <div class="section-number">01 — About</div>
-  <h2>Strategy-led.<br><em>Technically deep.</em></h2>
-  <p>
-    I help organizations turn data into decisions. That means building the
-    pipelines, databases, and dashboards that make data trusted, accessible,
-    and actionable — but it also means understanding the questions stakeholders
-    are actually trying to answer before writing a single line of code. My
-    philosophy is simple: a tool no one uses effectively has no value. The
-    value comes from its use.
-  </p>
-  <p>
-    My approach to data work is shaped by a liberal arts education in economics
-    and political science — I try to understand the broader system, the
-    incentives, and the story first before digging into the data. That habit of
-    framing problems before solving them has made me a better analyst and a
-    better collaborator.
-  </p>
-  <p>
-    Growing up in Pennsylvania — a state I know firsthand is more politically
-    complicated than most national coverage suggests — has shaped both my
-    research instincts and how I think about the relationship between data and
-    real-world decisions.
-  </p>
-  <p>
-    I'm looking to bring this work to organizations where the mission matters.
-    That includes political data and civic tech, nonprofits, advocacy
-    organizations, and other mission-driven or social-impact spaces where
-    better data infrastructure and stronger analytical thinking can translate
-    directly into real-world change. I'm drawn to roles that sit at the
-    intersection of strategy and technical execution: close enough to
-    stakeholders to shape the questions being asked, and technical enough to
-    build the systems that answer them.
-  </p>
-  <p>
-    Based in Washington, D.C. Bluebonnet Data Fellow. Recipient of the
-    Department of Energy Administrator's Achievement Award.
-  </p>
-</div>
-      <div class="about-right fade-up">
-        <div class="focus-areas">
-          <div class="focus-card">
-            <div class="focus-icon">◈</div>
-            <h4>Data Architecture</h4>
-            <p>Designing scalable databases, ETL pipelines, and data governance frameworks</p>
-          </div>
-          <div class="focus-card">
-            <div class="focus-icon">◎</div>
-            <h4>Analytical Platforms</h4>
-            <p>End-to-end development of interactive dashboards and decision-support tools</p>
-          </div>
-          <div class="focus-card">
-            <div class="focus-icon">◇</div>
-            <h4>Political Data</h4>
-            <p>Voter file analysis, campaign finance reporting, field operations data</p>
-          </div>
-          <div class="focus-card">
-            <div class="focus-icon">◉</div>
-            <h4>Strategic Leadership</h4>
-            <p>Translating stakeholder needs into technical roadmaps and analytical products</p>
-          </div>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-date">2025 — Present</div>
-            <div class="timeline-role">Senior Associate, Project Lead</div>
-            <div class="timeline-org">Technomics, Inc. — Data Management & Analytics</div>
-            <div class="timeline-org">U.S. Department of Energy - CAAT </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">2021 — 2025</div>
-            <div class="timeline-role">Senior Associate</div>
-            <div class="timeline-org">Technomics, Inc. — Data Management & Analytics</div>
-            <div class="timeline-org">U.S. Department of Energy - CAAT & IIP</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">2020 — 2021</div>
-            <div class="timeline-role">Data Fellow</div>
-            <div class="timeline-org">Bluebonnet Data — Yang for NY / DePasquale for Congress</div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">2019</div>
-            <div class="timeline-role">BA, Economics &amp; Political Science</div>
-            <div class="timeline-org">Dickinson College</div>
-            <div class="timeline-org">Magna Cum Laude</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WORK -->
-<section class="work-section" id="work">
-  <div class="container">
-    <div class="section-header fade-up">
-      <div class="section-number">02 — Work</div>
-      <h2 class="section-title">Selected <em>projects</em></h2>
-    </div>
-    <div class="work-grid">
-
-      <!-- Featured: CAAT -->
-<div class="work-card featured fade-up">
-  <div>
-    <div style="grid-column: span 2;">
-    <span class="work-tag tag-consulting">Federal Consulting</span>
-    <h3>CAAT Dashboard &amp; C2DB</h3>
-    <p>
-      An R Shiny analytics platform and SQL Server database supporting
-      benchmarking and evaluation of multi-billion dollar NNSA capital
-      acquisition programs. Serves 75+ federal analysts and is the primary
-      decision-support tool for program oversight.
-    </p>
-    <div class="work-meta">
-      <span class="meta-pill">R Shiny</span>
-      <span class="meta-pill">SQL Server</span>
-      <span class="meta-pill">bslib</span>
-      <span class="meta-pill">ETL Pipelines</span>
-      <span class="meta-pill">DBI / dbplyr</span>
-      <span class="meta-pill">pointblank</span>
-    </div>
-  </div>
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; grid-column: span 2;">
-    <div>
-      <div style="font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
-                  color: #8a8a84; margin-bottom: 0.75rem;">Strategy & Stakeholder Engagement</div>
-      <ul class="work-highlights">
-        <li>Conducted ongoing stakeholder engagement to elicit user needs and translate analytical requirements into new platform features — serving as the primary interface between federal clients and the development team</li>
-        <li>Led change management across a user base of 75+ federal analysts through tailored use-case demonstrations designed around each stakeholder's specific analytical workflows and program responsibilities</li>
-        <li>Developed comprehensive training guides and instructional materials enabling analysts to independently use platform capabilities for program analysis and decision-making</li>
-        <li>Drove user adoption and stakeholder buy-in through targeted engagement and training — transforming stakeholders from passive recipients to active daily users, with day-over-day dashboard hits increasing over 50%</li>
-      </ul>
-    </div>
-    <div>
-      <div style="font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
-                  color: #8a8a84; margin-bottom: 0.75rem;">Technical</div>
-      <ul class="work-highlights">
-        <li>Led development roadmap for v4.0, introducing 5 new analytical features and an expanded benchmarking dataset</li>
-        <li>Designed SQL Server infrastructure including triggers, extended properties, and metadata structures for data governance</li>
-        <li>Architected and maintained ETL pipelines using custom R package development and tidyverse workflows</li>
-        <li>Implemented 100+ automated data validations using pointblank, improving data quality and stakeholder trust</li>
-        <li>Built and migrated frontend modules using Shiny and bslib; managed Posit Connect server including deployments, environment configuration, and access control</li>
-      </ul>
-    </div>
-  </div>
-</div>
-<!-- Data Science Portfolio -->
-<div class="work-card fade-up">
-  <span class="work-tag tag-political">Original Research</span>
-  <h3>Pennsylvania Electoral Atlas</h3>
-  <p>
-    A five-cycle electoral analysis tool mapping Pennsylvania's working-class
-    realignment from 2008–2024. Built on the argument that the shift is
-    primarily a structural economic story — not a candidate-specific one —
-    the tool identifies persuasion targets for 2026 and 2028.
-  </p>
-  <div class="work-meta">
-    <span class="meta-pill">R Shiny</span>
-    <span class="meta-pill">tidycensus</span>
-    <span class="meta-pill">leaflet</span>
-    <span class="meta-pill">Medallion Architecture</span>
-    <span class="meta-pill">Political Data</span>
-  </div>
-  <ul class="work-highlights">
-    <li>Classified all 67 PA counties by five-election flip pattern across 2008–2024</li>
-    <li>Overlaid structural economic indicators — income stagnation, cost burden, manufacturing decline — to test the thesis against the data</li>
-    <li>Built a forward-looking persuasion score identifying highest-impact counties for 2026/2028 resource allocation</li>
-    <li>Deployed as a live interactive dashboard with adjustable analytical weights</li>
-  </ul>
-  <a href="https://vgwalter.shinyapps.io/pa-electoral-atlas/" target="_blank" class="work-arrow">↗</a>
-</div>
-      
-      <!-- IIP -->
-      <div class="work-card fade-up">
-        <span class="work-tag tag-consulting">Federal Consulting</span>
-        <h3>Integrated Infrastructure Portfolio - Data Pipeline &amp; IIPDB</h3>
-        <p>
-          <p>
-              A R Shiny dashboard enabling stakeholders to perform tradeoff analysis and
-              portfolio optimization across a list of infrastructure projects — adjusting
-              start years, durations, and funding levels to build portfolios that are both
-              executable and affordable. My primary contribution is the backend data
-              infrastructure that powers it: an ETL pipeline and SQLite database following
-              the medallion architecture model, designed to push analytical complexity into
-              the data layer and minimize computation in the dashboard itself.
-        </p>
-        <div class="work-meta">
-          <span class="meta-pill">SQLite</span>
-          <span class="meta-pill">R Package Dev</span>
-          <span class="meta-pill">Medallion Architecture</span>
-          <span class="meta-pill">Data Validation</span>
-        </div>
-          <ul class="work-highlights">
-            <li>Architected and maintain IIPDB — a SQLite database and custom R package pipeline following the medallion model: raw ingestion → silver standardization → gold transformation</li>
-            <li>Silver layer cleans and standardizes multiple disparate data sources into consistent, query-ready tables — separating ingestion concerns from analytical logic</li>
-            <li>Gold layer applies custom R modeling functions that encode domain-specific business logic and pre-compute analytical results, minimizing computation in the Shiny frontend</li>
-            <li>Designed the full database schema — table structures, relationships, and constraints — to support efficient querying from the dashboard</li>
-            <li>Wrote all ETL functions within a custom R package handling ingestion, cleaning, transformation, and loading across every data source</li>
-          </ul>
-      </div>
-
-      <!-- Bluebonnet -->
-      <div class="work-card fade-up">
-        <span class="work-tag tag-political">Political Data</span>
-        <h3>Bluebonnet Data Fellowship</h3>
-        <p>
-          Served as a data fellow on two Democratic campaigns, building automated data infrastructure that eliminated manual work and directly enabled campaign operations and fundraising compliance.
-        </p>
-        <div class="work-meta">
-          <span class="meta-pill">Python</span>
-          <span class="meta-pill">Docker</span>
-          <span class="meta-pill">R</span>
-          <span class="meta-pill">VAN / VoteBuilder</span>
-          <span class="meta-pill">Voter File Analysis</span>
-        </div>
-        <ul class="work-highlights">
-          <li>Built automated Python + Docker pipelines reporting ActBlue donation data to NYC Campaign Finance Board — eliminated 20+ hours of manual work per week</li>
-          <li>Supported $6M+ in matched donations for Yang for New York through reliable, automated financial reporting</li>
-          <li>Analyzed census and voter file data in R to assess voter engagement and inform precinct-level outreach strategy for DePasquale for Congress</li>
-        </ul>
-        <span class="work-arrow">↗</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="skills-section" id="skills">
-  <div class="container">
-    <div class="section-header fade-up">
-      <div class="section-number">03 — Skills</div>
-      <h2 class="section-title">Tools &amp; <em>expertise</em></h2>
-    </div>
-    <div class="skills-grid fade-up">
-      <div class="skill-group">
-        <div class="skill-group-label">Languages</div>
-        <ul class="skill-list">
-          <li><span class="skill-dot"></span>R (tidyverse, Shiny, bslib)</li>
-          <li><span class="skill-dot"></span>SQL (SQL Server, PostgreSQL, SQLite)</li>
-          <li><span class="skill-dot"></span>Python (pandas)</li>
-          <li><span class="skill-dot"></span>Excel (Power Query, VBA)</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-label">Data Engineering</div>
-        <ul class="skill-list">
-          <li><span class="skill-dot"></span>ETL pipeline design</li>
-          <li><span class="skill-dot"></span>Custom R package development</li>
-          <li><span class="skill-dot"></span>Medallion architecture</li>
-          <li><span class="skill-dot"></span>Data validation (pointblank)</li>
-          <li><span class="skill-dot"></span>DBI / dbplyr</li>
-          <li><span class="skill-dot"></span>Docker</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-label">Platforms & Tools</div>
-        <ul class="skill-list">
-          <li><span class="skill-dot"></span>Posit Connect</li>
-          <li><span class="skill-dot"></span>Git / version control</li>
-          <li><span class="skill-dot"></span>NGP VAN / VoteBuilder</li>
-          <li><span class="skill-dot"></span>SSMS (SQL Server)</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-label">Domain Expertise</div>
-        <ul class="skill-list">
-          <li><span class="skill-dot"></span>Political data & campaign operations</li>
-          <li><span class="skill-dot"></span>Federal program analysis</li>
-          <li><span class="skill-dot"></span>Voter file & census analysis</li>
-          <li><span class="skill-dot"></span>Campaign finance compliance</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-label">Strategic & Leadership</div>
-        <ul class="skill-list">
-          <li><span class="skill-dot"></span>Product roadmap ownership</li>
-          <li><span class="skill-dot"></span>Stakeholder engagement</li>
-          <li><span class="skill-dot"></span>Cross-functional team leadership</li>
-          <li><span class="skill-dot"></span>Technical documentation & training</li>
-          <li><span class="skill-dot"></span>DevOps & deployment workflows</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-label">Recognition</div>
-        <ul class="skill-list">
-          <li><span class="skill-dot"></span>2025 Team Achievement of the Year — ICEAA (WCAC)</li>
-          <li><span class="skill-dot"></span>NNSA Administrator's Achievement Award</li>
-          <li><span class="skill-dot"></span>Bluebonnet Data Fellow</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact-section" id="contact">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="contact-left fade-up">
-        <div class="section-number">04 — Contact</div>
-        <h2>Let's work<br><em>together.</em></h2>
-        <p>
-          I'm exploring opportunities in political data and technology, strategy consulting, social science research, and think tanks. If you're looking for someone who can lead both the technical architecture and the strategic conversation, I'd love to connect.
-        </p>
-        <div class="contact-links">
-          <a href="mailto:vgwalter24@gmail.com" class="contact-link">
-            <div class="contact-link-icon">✉</div>
-            <div>
-              <span class="contact-link-label">Email</span>
-              <span class="contact-link-value">vgwalter24@gmail.com</span>
-            </div>
-          </a>
-          <a href="https://linkedin.com/in/Victoria-g-walter" target="_blank" class="contact-link">
-            <div class="contact-link-icon">in</div>
-            <div>
-              <span class="contact-link-label">LinkedIn</span>
-              <span class="contact-link-value">linkedin.com/in/Victoria-g-walter</span>
-            </div>
-          </a>
-          <a href="https://github.com/vgwalter" target="_blank" class="contact-link">
-            <div class="contact-link-icon">gh</div>
-            <div>
-              <span class="contact-link-label">GitHub</span>
-              <span class="contact-link-value">github.com/vgwalter</span>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="contact-right fade-up">
-        <div class="availability-badge">
-          <span class="availability-dot"></span>
-          Open to new opportunities
-        </div>
-        <p style="font-size: 13px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem; font-weight: 500;">Roles I'm targeting</p>
-<ul class="interest-list">
-  <li>Political data & civic tech organizations</li>
-  <li>Nonprofits & advocacy organizations</li>
-  <li>Mission-driven & social impact organizations</li>
-  <li>Campaigns & election infrastructure</li>
-  <li>Strategy & technology consulting</li>
-</ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
+<div class="runner">
   <span>Victoria G. Walter</span>
-  <span>vgwalter24@gmail.com · Arlington, VA</span>
-  <span>© 2025</span>
-</footer>
+  <nav>
+    <a href="#approach">Approach</a>
+    <a href="#work">Work</a>
+    <a href="#methods">Methods</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div>
 
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-      }
-    });
-  }, { threshold: 0.1 });
+<main class="sheet" id="main">
 
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-</script>
+  <!-- ============ MASTHEAD ============ -->
+  <header>
+    <div class="masthead">
+      <div>
+        <h1>Victoria G. Walter</h1>
+        <p class="standfirst">
+          I work across the full arc of an analytical problem — its diagnosis, the
+          infrastructure built to resolve it, and the research that comes after.
+        </p>
+      </div>
+
+      <table class="figures">
+        <caption>Figures</caption>
+        <tbody>
+          <tr><td class="n">5+</td><td class="d">Years building analytical platforms</td></tr>
+          <tr><td class="n">100+</td><td class="d">Analysts using the platform I lead</td></tr>
+          <tr><td class="n">225+</td><td class="d">Capital projects modeled in the portfolio database I maintain</td></tr>
+          <tr><td class="n">$6M+</td><td class="d">In matched donations supported by a pipeline I built</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="byline">
+      <span>Washington, D.C.</span>
+      <span>Cost &amp; Capital Analysis · Business Analytics · Economic Research</span>
+      <a href="mailto:vgwalter24@gmail.com">vgwalter24@gmail.com</a>
+      <a href="https://linkedin.com/in/Victoria-g-walter" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/vgwalter" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <!-- ============ ABSTRACT ============ -->
+  <section class="abstract">
+    <span class="label">Abstract</span>
+    <p>
+      For five years I have built the analytical platforms that other people do their work
+      inside: the data underneath them, the models that consume it, and the documentation
+      that lets an analyst defend a number when it is challenged. I lead one of those
+      platforms now, which means owning release strategy and data governance, and spending
+      a substantial minority of my time with the analysts whose work depends on what we ship.
+    </p>
+    <p>
+      The research I undertake independently runs the other direction — asking whether a
+      received account survives contact with the evidence. I am looking for roles at that
+      intersection: business and product analytics, cost and financial analysis, economic
+      research, and strategy consulting.
+    </p>
+  </section>
+
+  <!-- ============ §1 APPROACH ============ -->
+  <section class="section" id="approach">
+    <div class="section-head">
+      <span class="no">§1</span>
+      <h2>Approach</h2>
+      <span class="rule"></span>
+      <span class="aside">Diagnosis before architecture</span>
+    </div>
+
+    <div class="band">
+      <div class="prose">
+        <p>
+          The questions an organization asks of its data are seldom the questions it most
+          needs answered. A good deal of my work begins in that gap — in sustained
+          conversation with the people who will use a system, establishing where their hours
+          are disappearing, which figures they have quietly ceased to trust, and what they
+          are actually being asked to defend. Only once that is settled does the technical
+          problem become legible.
+        </p>
+        <p>
+          What follows is architecture: the pipelines, databases, and governance structures
+          that render a number traceable and therefore defensible. The sequence matters more
+          than the inventory. Storing documentation as a property of the data itself was not
+          a question of taste; it resolved a particular complaint, that analysts could not
+          establish where a figure had originated. Migrating a body of models off a shared
+          drive and into the platform addressed version control and manual re-entry rather
+          than any appetite for a more modern interface.
+        </p>
+        <p>
+          My orientation to this work is economic rather than narrowly technical. I studied
+          economics and political science at Dickinson, and what that training left me with
+          was less a method than a disposition: an instinct to characterize a system and its
+          incentives before interrogating the data it produces.
+        </p>
+        <p>
+          Nearly all of this has been the work of small teams, and what interests me most are
+          the seams between contributions: where a data model meets the analytical model
+          consuming it, where a schema decision taken in one quarter resurfaces in another as
+          a constraint on somebody's analysis. The work I am proudest of has tended to live
+          there — a governance layer, a release strategy, a training program that converted
+          skeptical analysts into daily users.
+        </p>
+      </div>
+
+      <div>
+        <aside class="gloss">
+          <b>Note</b>
+          Every consequential technical decision described in §2 can be accounted for in
+          terms of the business problem that prompted it.
+        </aside>
+        <aside class="gloss">
+          <b>On domain</b>
+          I have done this work in mission-driven settings and would gladly do so again,
+          though the underlying capability is indifferent to domain.
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ §2 WORK ============ -->
+  <section class="section" id="work">
+    <div class="section-head">
+      <span class="no">§2</span>
+      <h2>Selected Work</h2>
+      <span class="rule"></span>
+      <span class="aside">Five entries</span>
+    </div>
+
+    <!-- CAAT -->
+    <article class="entry">
+      <div class="entry-head">
+        <span class="kicker">Cost &amp; Capital Analysis · 2021—</span>
+        <h3>CAAT: Capital Program Benchmarking &amp; Cost Analysis Platform</h3>
+      </div>
+
+      <div>
+        <p>
+          An R Shiny analytics platform backed by a SQL Server database (C2DB), supporting
+          cost benchmarking and performance evaluation of multi-billion dollar NNSA capital
+          acquisition programs. It serves <span class="fig">100+</span> federal cost estimators and program analysts.
+          I have worked on it for five years and have led the project since October.
+        </p>
+        <p>
+          The platform exists to do three things: consolidate dirty, disparate source data
+          into one accurate and documented store with business logic encoded in an automated
+          validation pipeline; replace siloed Excel models with interactive,
+          version-controlled tools inside the dashboard; and let analysts build and export
+          their own queries rather than waiting on someone else to pull the data. All three
+          serve the same end — trusted, tailored data that lets cost estimators reach
+          defensible conclusions faster.
+        </p>
+
+        <div class="translation">
+          <b>In commercial terms</b>
+          FP&amp;A and capital planning infrastructure for a multi-billion dollar project
+          portfolio — the benchmarking data, variance analysis, and self-serve reporting that
+          the analysts supporting those programs work from.
+        </div>
+
+        <dl class="spec">
+          <dt>Role</dt><dd>Project lead since Oct.; senior contributor prior</dd>
+          <dt>Team</dt><dd>3–5, several part-time</dd>
+          <dt>Stack</dt><dd>R Shiny · SQL Server · bslib · DBI/dbplyr · pointblank · Azure</dd>
+        </dl>
+      </div>
+
+      <div>
+        <div class="subhead">Led &amp; owned</div>
+        <ul class="findings">
+          <li class="key">Led the v4.0 production release: set release strategy through repeated engagement with stakeholders across teams, ran the delivery sprint, owned build of a new analytical model, and reviewed and approved the team's work into production</li>
+          <li>Designed the SQL Server governance layer — triggers, change log, and SQL views — including a data dictionary maintained as an extended property, so documentation lives with the data rather than beside it</li>
+          <li class="key">Established version control practice for both CAAT and IIP: set up and connected the GitHub repositories, wrote the documentation covering account setup, cloning, and contribution workflow, and administer access permissions across both projects</li>
+          <li>Built several of the dashboard's analytical visualizations and one of its models, designed against UI/UX best practice — consistent interaction patterns, deliberate information hierarchy, and layouts organized around how analysts work rather than how the data is stored</li>
+          <li>Leading the ongoing migration of the database and Posit Connect server off on-premise hardware and onto Azure</li>
+          <li>Wrote the in-depth training guide, ran dashboard trainings, and led custom demos built around each incoming stakeholder group's workflows</li>
+          <li>Led onboarding and knowledge sharing across the team, including the technical documentation new contributors need to become productive</li>
+        </ul>
+
+        <div class="subhead">Built with the team</div>
+        <ul class="findings">
+          <li>Contributed to the database redesign into a snowflake schema</li>
+          <li>Helped define business logic and built a portion of the automated validation suite using pointblank</li>
+          <li>Wrote data cleaning and loading functions, and contributed to the custom R package behind the ETL pipeline</li>
+          <li>Migrating the legacy Excel models onto the platform brought them under version control, added documentation, and let inputs flow in automatically rather than being keyed in by hand</li>
+          <li>Adoption grew from passive recipients to active daily users, with day-over-day dashboard hits increasing more than <span class="fig">50%</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- IIP -->
+    <article class="entry">
+      <div class="entry-head">
+        <span class="kicker">Cost &amp; Capital Analysis · 2021—2025</span>
+        <h3>IIP: Capital Portfolio Optimization &amp; Tradeoff Analysis</h3>
+      </div>
+
+      <div>
+        <p>
+          A decision-support platform where analysts construct and optimize portfolios of
+          capital projects, adjusting start years, durations, and funding levels. The problem
+          it addresses is a three-way constraint: a portfolio has to be affordable against
+          the budget available, executable given real scheduling and capacity limits, and
+          still sufficient to meet mission requirements.
+        </p>
+        <p>
+          My contribution is the data layer, IIPDB. Most of its complexity exists to give
+          users flexibility. Analysts can select from a wide range of cleaned, documented
+          inputs when configuring a simulation, so the database holds those inputs for all
+          <span class="fig">225+</span> capital projects in the portfolio — three to five configurable inputs per
+          project, each carrying one to three data points — and persists every scenario a
+          user builds.
+        </p>
+
+        <div class="translation">
+          <b>In commercial terms</b>
+          The backend of a planning and scenario system, closer to an FP&amp;A scenario tool
+          than a reporting warehouse — every "what if" a user builds becomes persisted state,
+          not a throwaway calculation.
+        </div>
+
+        <dl class="spec">
+          <dt>Role</dt><dd>Data layer owner</dd>
+          <dt>Stack</dt><dd>SQLite → PostgreSQL · R package dev · medallion architecture</dd>
+        </dl>
+      </div>
+
+      <div>
+        <div class="subhead">Findings</div>
+        <ul class="findings">
+          <li>Architected and maintain IIPDB — a database and custom R package pipeline following the medallion model: raw ingestion → silver standardization → gold transformation</li>
+          <li>Designed the schema — tables, relationships, constraints — around the access patterns the optimization models actually use, rather than around the shape of the source data</li>
+          <li>Silver layer standardizes disparate sources into consistent, query-ready tables, separating ingestion concerns from analytical logic</li>
+          <li>Gold layer applies custom R modeling functions that encode domain business logic and pre-compute results, keeping computation out of the Shiny frontend</li>
+          <li>Currently migrating the store from SQLite to PostgreSQL as concurrent scenario writes outgrow what SQLite handles comfortably</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- PA -->
+    <article class="entry">
+      <div class="entry-head">
+        <span class="kicker">Economic Research · Independent</span>
+        <h3>Regional Economic Realignment: Pennsylvania, 2008–2024</h3>
+      </div>
+
+      <div>
+        <p>
+          A county-level analysis of Pennsylvania's economic and political realignment across
+          five election cycles. The prevailing account attributes the shift to manufacturing
+          job losses concentrated around 2016. The data does not support that timeline:
+          manufacturing had been leaving the state for decades, and the erosion of working
+          and middle class economic position was correspondingly gradual. What changed more
+          recently was not employment but pressure — households already weakened by long-run
+          wage stagnation meeting steeply rising costs of living.
+        </p>
+
+        <div class="translation">
+          <b>Provenance</b>
+          Growing up in Pennsylvania, a state more economically complicated than national
+          coverage suggests, shaped the research instinct behind this one.
+        </div>
+
+        <dl class="spec">
+          <dt>Role</dt><dd>Sole author</dd>
+          <dt>Stack</dt><dd>R Shiny · tidycensus · leaflet · Census/ACS</dd>
+          <dt>Status</dt><dd><a href="https://vgwalter.shinyapps.io/pa-electoral-atlas/" target="_blank" rel="noopener">Live dashboard ↗</a></dd>
+        </dl>
+      </div>
+
+      <div>
+        <div class="subhead">Findings</div>
+        <ul class="findings">
+          <li>Built an economic indicator panel across all <span class="fig">67</span> counties from Census and ACS sources, tracking wage growth, cost burden, and manufacturing employment over a multi-decade window rather than a single cycle</li>
+          <li>Classified counties by five-election flip pattern and tested the long-horizon stagnation thesis against outcomes</li>
+          <li>Separated long-run structural decline from recent cost pressure, so the two effects could be examined independently rather than collapsed into one narrative</li>
+          <li>Constructed a forward-looking targeting score identifying highest-return counties for 2026 and 2028</li>
+          <li>Deployed as an interactive dashboard where users adjust indicator weights and watch the ranking respond</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Yang -->
+    <article class="entry">
+      <div class="entry-head">
+        <span class="kicker">Financial Reporting &amp; Compliance · 2020—2021</span>
+        <h3>Automated Regulatory Reporting — Yang for New York</h3>
+      </div>
+
+      <div>
+        <p>
+          The campaign's matching-funds claims depended on donation data reaching the NYC
+          Campaign Finance Board both accurately and on schedule. I built the pipeline that
+          delivered it — running unattended against a fixed statutory deadline, in a context
+          where a reconciliation error carries immediate financial consequence rather than a
+          correction in next quarter's report.
+        </p>
+
+        <div class="translation">
+          <b>In commercial terms</b>
+          Automated regulatory financial reporting, engineered to run without supervision
+          against an external deadline that does not move.
+        </div>
+
+        <dl class="spec">
+          <dt>Role</dt><dd>Bluebonnet Data fellow</dd>
+          <dt>Stack</dt><dd>Python · Docker · ActBlue</dd>
+        </dl>
+      </div>
+
+      <div>
+        <div class="subhead">Findings</div>
+        <ul class="findings">
+          <li>Built automated Python and Docker pipelines reporting ActBlue donation data to the NYC Campaign Finance Board</li>
+          <li>Eliminated <span class="fig">20+ hours</span> of manual reconciliation per week, and removed the error class manual entry introduces</li>
+          <li>Supported <span class="fig">$6M+</span> in matched donations through reliable automated reporting</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- DePasquale -->
+    <article class="entry">
+      <div class="entry-head">
+        <span class="kicker">Research &amp; Operations Analytics · 2020—2021</span>
+        <h3>Demographic Trend Analysis &amp; Field Automation — DePasquale for Congress</h3>
+      </div>
+
+      <div>
+        <p>
+          An outside political consulting firm circulated a report indicating that support
+          among one demographic group was declining week over week. I analyzed census and
+          voter file data to examine the same question over a longer horizon, and what the
+          underlying trends showed pointed in the other direction.
+        </p>
+        <p>
+          Separately, field organizers were spending hours each week hand-entering records of
+          organizing and fundraising activity. I automated that reporting.
+        </p>
+
+        <div class="translation">
+          <b>In commercial terms</b>
+          Examining a vendor's published conclusion against primary data rather than
+          accepting it at face value, and removing manual reporting overhead from the people
+          whose time it was worst spent on.
+        </div>
+
+        <dl class="spec">
+          <dt>Role</dt><dd>Bluebonnet Data fellow</dd>
+          <dt>Stack</dt><dd>R · Census/ACS · VAN/VoteBuilder</dd>
+        </dl>
+      </div>
+
+      <div>
+        <div class="subhead">Findings</div>
+        <ul class="findings">
+          <li class="key">Analyzed census and voter file data in R to examine demographic support trends over time, testing a widely circulated claim against the underlying evidence</li>
+          <li>Used those trends to inform precinct-level outreach strategy</li>
+          <li>Automated internal reporting on organizing and fundraising activity, eliminating hours of weekly manual data entry for field organizers</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ §3 METHODS ============ -->
+  <section class="section" id="methods">
+    <div class="section-head">
+      <span class="no">§3</span>
+      <h2>Methods &amp; Tools</h2>
+      <span class="rule"></span>
+      <span class="aside">Reference</span>
+    </div>
+
+    <div class="registers">
+      <div class="register">
+        <h4>Analysis &amp; Modeling</h4>
+        <p>Cost and variance analysis · benchmarking methodology · portfolio optimization and tradeoff modeling · census and survey data analysis · data validation and QA design</p>
+      </div>
+      <div class="register">
+        <h4>Languages</h4>
+        <p>SQL (SQL Server, PostgreSQL, SQLite) · R (tidyverse, Shiny, bslib) · Python (pandas, Docker pipelines) · Excel (Power Query, VBA)</p>
+      </div>
+      <div class="register">
+        <h4>Data Engineering</h4>
+        <p>ETL pipeline design · schema design (snowflake, medallion) · data governance and documentation · custom R package development · data validation (pointblank) · DBI/dbplyr · Docker</p>
+      </div>
+      <div class="register">
+        <h4>Platforms</h4>
+        <p>Posit Connect · Git and GitHub administration · Azure · Microsoft Planner and GitHub Issues · SSMS · NGP VAN/VoteBuilder</p>
+      </div>
+      <div class="register">
+        <h4>Domain</h4>
+        <p>Cost estimating and capital planning · federal program and budget analysis · campaign finance and regulatory reporting · political data and campaign operations</p>
+      </div>
+      <div class="register">
+        <h4>Practice</h4>
+        <p>Requirements elicitation and analysis · agile delivery and sprint leadership · product roadmap ownership · major release planning · cross-functional stakeholder engagement · onboarding, documentation and training</p>
+      </div>
+    </div>
+
+    <div class="reference-split">
+      <div>
+        <div class="subhead">Record</div>
+        <table class="schedule">
+          <tbody>
+            <tr>
+              <td class="when">2025 — present</td>
+              <td class="what"><b>Senior Associate, Project Lead</b>Technomics, Inc. — Data Management &amp; Analytics · U.S. Dept. of Energy, CAAT</td>
+            </tr>
+            <tr>
+              <td class="when">2021 — 2025</td>
+              <td class="what"><b>Senior Associate</b>Technomics, Inc. — Data Management &amp; Analytics · U.S. Dept. of Energy, CAAT &amp; IIP</td>
+            </tr>
+            <tr>
+              <td class="when">2020 — 2021</td>
+              <td class="what"><b>Data Fellow</b>Bluebonnet Data — Yang for New York / DePasquale for Congress</td>
+            </tr>
+            <tr>
+              <td class="when">2019</td>
+              <td class="what"><b>BA, Economics &amp; Political Science</b>Dickinson College, magna cum laude</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="honours">
+        <div class="subhead">Recognition</div>
+        <ul class="findings">
+          <li>2025 Team Achievement of the Year — International Cost Estimating and Analysis Association (ICEAA)</li>
+          <li>NNSA Administrator's Achievement Award</li>
+          <li>Bluebonnet Data Fellow</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ §4 CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="section-head">
+      <span class="no">§4</span>
+      <h2>Positions Sought</h2>
+      <span class="rule"></span>
+      <span class="aside">Open to new opportunities</span>
+    </div>
+
+    <div class="band">
+      <div class="prose">
+        <p>
+          Close enough to the question to help frame it, technical enough to build what
+          answers it. I am open to work in business, product and operations analytics;
+          FP&amp;A, cost analysis and capital planning; economic and policy research;
+          strategy and technology consulting; and civic tech, campaigns and mission-driven
+          organizations.
+        </p>
+        <p>
+          The best way to reach me is
+          <a href="mailto:vgwalter24@gmail.com">vgwalter24@gmail.com</a>.
+        </p>
+      </div>
+
+      <aside class="gloss">
+        <b>Contact</b>
+        <a href="mailto:vgwalter24@gmail.com">vgwalter24@gmail.com</a><br>
+        <a href="https://linkedin.com/in/Victoria-g-walter" target="_blank" rel="noopener">LinkedIn</a><br>
+        <a href="https://github.com/vgwalter" target="_blank" rel="noopener">GitHub</a><br>
+        Washington, D.C.
+      </aside>
+    </div>
+  </section>
+
+  <footer class="colophon">
+    <span>Victoria G. Walter</span>
+    <span>vgwalter24@gmail.com</span>
+    <span>Washington, D.C.</span>
+    <span>© 2026</span>
+  </footer>
+
+</main>
 </body>
 </html>

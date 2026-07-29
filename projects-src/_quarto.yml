@@ -1,0 +1,43 @@
+project:
+  type: website
+  output-dir: ../projects
+
+website:
+  title: "Victoria G. Walter"
+  site-url: https://vgwalter.com/projects
+  navbar:
+    background: light
+    left:
+      - text: "← Back to vgwalter.com"
+        href: https://vgwalter.com
+    right:
+      - icon: github
+        href: https://github.com/vgwalter
+        aria-label: GitHub
+
+format:
+  html:
+    theme:
+      - cosmo
+      - theme.scss
+    toc: true
+    toc-depth: 3
+    toc-title: "On this page"
+    code-fold: true
+    code-summary: "Show code"
+    code-tools: true
+    fig-align: center
+    fig-responsive: true
+    df-print: paged
+    link-external-newwindow: true
+    citations-hover: true
+    smooth-scroll: true
+
+# Python analyses render through Jupyter. Switch to `knitr` on a per-file
+# basis by setting `engine: knitr` in that document's front matter.
+engine: jupyter
+
+execute:
+  freeze: auto      # only re-run a document when its source actually changes
+  warning: false
+  message: false
