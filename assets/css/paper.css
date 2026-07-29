@@ -20,11 +20,8 @@
   --ink-muted: #86847c;
   --canvas: #f7f5f0;
   --canvas-deep: #e2e8ee;
-  --canvas-tint: #f2ead6;
   --accent: #1f3f5c;
-  --accent-light: #e2e8ee ;
-  --gold: #8a6410;
-  --gold-light: #f2ead6;
+  --accent-light: #e2e8ee;
   --rule: rgba(26, 26, 24, 0.15);
   --rule-mid: rgba(26, 26, 24, 0.3);
   --rule-heavy: rgba(26, 26, 24, 0.75);
@@ -421,10 +418,9 @@ body {
 
 .honours {
   background: var(--canvas-deep);
-  border-left: 2px solid var(--gold);
+  border-left: 2px solid var(--accent);
   padding: 1.1rem 1.3rem;
 }
-.honours .subhead { border-bottom-color: rgba(138,100,16,0.25); color: var(--gold); }
 .honours .findings li { font-size: 0.85rem; margin-bottom: 0.5rem; }
 .honours .findings li:last-child { margin-bottom: 0; }
 
@@ -534,4 +530,3 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .findings li.key::before { content: '▸'; color: var(--accent); }
 
 .gloss { border-top-color: var(--accent); }
-.honours .findings li::before { color: var(--gold); }
